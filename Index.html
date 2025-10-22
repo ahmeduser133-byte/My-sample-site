@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Configurable Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="main-header"></h1>
+        <p id="main-paragraph"></p>
+        <ul id="item-list"></ul>
+    </div>
+
+    <script>
+        // =======================================================
+        // 🚀 SECTION 1: CONFIGURATION VARIABLES (MODIFY THESE VALUES)
+        // =======================================================
+
+        const siteTitle = "My Configurable Project"; // Title for the main header
+        const siteDescription = "This is a simple website where the text is set using JavaScript variables. Just edit the values in the 'SECTION 1' above and refresh the page to see the changes!"; // Main paragraph content
+        const listItems = [
+            "First customizable item",
+            "Second customizable item",
+            "Third customizable item (change me!)",
+            "Fourth customizable item"
+        ];
+        
+        // =======================================================
+        // 🛠️ SECTION 2: FUNCTIONALITY (DO NOT MODIFY BELOW HERE)
+        // =======================================================
+
+        // 1. Update the Main Header
+        document.getElementById('main-header').textContent = siteTitle;
+
+        // 2. Update the Main Paragraph
+        document.getElementById('main-paragraph').textContent = siteDescription;
+
+        // 3. Populate the List
+        const ul = document.getElementById('item-list');
+        listItems.forEach(itemText => {
+            const li = document.createElement('li');
+            li.textContent = itemText;
+            ul.appendChild(li);
+        });
+
+    </script>
+
+</body>
+</html>
